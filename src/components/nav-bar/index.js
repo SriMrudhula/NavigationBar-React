@@ -14,12 +14,14 @@ export default class NavBar extends Component {
         <li><Link to="/about">About</Link></li>
         </div>
         <div className="card w-20 ma-0">
+          <section className="card-text" data-testid="tab-content">
           <Switch>
         <Route path="/" ><h1>HOME PAGE</h1></Route>
         <Route path="/news" ><h1>NEWS PAGE</h1></Route>
         <Route path="/contact"><h1>CONTACT PAGE</h1></Route>
         <Route path="/about" ><h1>ABOUT PAGE</h1></Route>
         </Switch>
+          </section>
         </div>
         </Router>
       </div>
