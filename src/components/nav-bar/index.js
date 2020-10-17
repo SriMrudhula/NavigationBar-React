@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import {BrowserRouter as Router,Link,Route,Switch} from 'react-router-dom';
+import {BrowserRouter as Router,Link,Route,Switch,Redirect} from 'react-router-dom';
 import "./index.css";
+
 
 export default class NavBar extends Component {
 
@@ -17,6 +18,9 @@ export default class NavBar extends Component {
         <div className="card w-20 ma-0">
           <section className="card-text" data-testid="tab-content">
           <Switch>
+          <Route exact path="/">
+                <Redirect to="/home"/>
+            </Route>
         <Route path="/home" render={() =><h1>HOME PAGE</h1>} />
         <Route path="/news" render={() => <h1>NEWS PAGE</h1>} />
         <Route path="/contact" render={() => <h1>CONTACT PAGE</h1>} />
